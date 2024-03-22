@@ -1,0 +1,4 @@
+B.	Desain Data: ( Maulana Malik)
+1.	Buat kelas Data yang memiliki atribut nilai (integer) dan deskripsi (String) untuk merepresentasikan data.
+2.	Buat kelas DataList untuk menyimpan dan mengelola daftar data.
+.
