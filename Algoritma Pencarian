@@ -1,0 +1,26 @@
+public Data linearSearch(int key) {
+        for (Data data : dataList) {
+            if (data.getValue() == key || data.getDescription().equals(Integer.toString(key))) {
+                return data;
+            }
+        }
+        return null;
+    }
+
+    public Data binarySearch(int key) {
+        Collections.sort(dataList, Comparator.comparingInt(Data::getValue));
+        int low = 0;
+        int high = dataList.size() - 1;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            int midValue = dataList.get(mid).getValue();
+            if (midValue == key) {
+                return dataList.get(mid);
+            } else if (midValue < key) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return null;
+    }
